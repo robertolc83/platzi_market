@@ -32,6 +32,8 @@ public class Compra {
     @OneToMany(mappedBy = "producto")
     private List<ComprasProducto> productos;
 
+    //GETTERS Y SETTERS
+
     public Integer getIdCompra() {
         return idCompra;
     }
