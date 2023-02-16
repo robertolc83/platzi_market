@@ -29,7 +29,7 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<ComprasProducto> productos;
 
     //GETTERS Y SETTERS
@@ -97,4 +97,6 @@ public class Compra {
     public void setProductos(List<ComprasProducto> productos) {
         this.productos = productos;
     }
+
+
 }
