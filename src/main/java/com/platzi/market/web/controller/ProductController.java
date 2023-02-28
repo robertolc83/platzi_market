@@ -22,8 +22,8 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping()
-    @ApiOperation("Get all supermarket products")
-    @ApiResponse(code = 200, message = "OK")
+    @ApiOperation("Get all supermarket products") //Swagger Documentation
+    @ApiResponse(code = 200, message = "OK") //Swagger Documentation
     //public List<Product> getAll() {
     public ResponseEntity<List<Product>> getAll() {
         return new ResponseEntity<>(productService.getAll(), HttpStatus.OK);

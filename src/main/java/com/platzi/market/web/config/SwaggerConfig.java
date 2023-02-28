@@ -13,7 +13,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        //Swagger Documentation. Indicamos el packete de controladores a documentar
+        //Swagger Documentation. Indicamos el packete de controladores a exponer en la UI de swagger
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.platzi.market.web.controller"))
